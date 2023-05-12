@@ -11,8 +11,8 @@ services:
     depends_on:
       - ipfs
       - postgres
-    extra_hosts:
-      - host.docker.internal:host-gateway
+#    extra_hosts:
+#      - host.docker.internal:host-gateway
     environment:
       postgres_host: postgres
       postgres_user: graph-node
@@ -20,7 +20,7 @@ services:
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
       GRAPH_NODE_CONFIG: '/data/chains-configs/chains.toml'
-      GRAPH_LOG: info
+      GRAPH_LOG: debug
     volumes:
       - ./configs:/data/chains-configs
   ipfs:

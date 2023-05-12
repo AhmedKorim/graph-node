@@ -8,17 +8,21 @@ pool_size = 10
 [chains]
 ingestor = "block_ingestor_node"
 
-[chains.Hermes]
-shard = "primary"
-provider = [{ label = "hermes", url = "http://host.docker.internal:5001" ,features= []}]
+#[chains.Hermes]
+#shard = "primary"
+#provider = [{ label = "hermes", url = "https://hermes-testnet.webb.tools" ,features= []}]
+#
+#[chains.Athena]
+#shard = "primary"
+#provider = [{ label = "athena", url = "https://athena-testnet.webb.tools" ,features= []}]
+#
+#[chains.Demter]
+#shard = "primary"
+#provider = [{ label = "demter", url = "https://demeter-testnet.webb.tools" ,features= []}]
 
-[chains.Athena]
+[chains.Sepolia]
 shard = "primary"
-provider = [{ label = "athena", url = "http://host.docker.internal:5002" ,features= []}]
-
-[chains.Demter]
-shard = "primary"
-provider = [{ label = "demter", url = "http://host.docker.internal:5003" ,features= []}]
+provider = [{ label = "sepolia", url = "https://sepolia.infura.io/v3/bc0cffa231784124ae1ff68dd9a89e1c" ,features= []}]
 
 [deployment]
 shard = "primary"
